@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
+const shortId = require("shortid");
 
 const petSchema = new mongoose.Schema({
+    _idShort: {
+        type: String,
+        default: shortId.generate,
+    },
     name: {
         type: String,
         required: true,
@@ -8,6 +13,10 @@ const petSchema = new mongoose.Schema({
     image: {
         public_id: String,
         url: String,
+    },
+    city: {
+        type: String,
+        required: true,
     },
     species: {
         type: String,
@@ -17,13 +26,14 @@ const petSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    area: {
+    addressReunited: {
         type: String,
-        required: true,
+    }, 
+    areaLost: {
+        type: String,
     },
-    address: {
+    areaFound: {
         type: String,
-        required: true,
     },
     description: {
         type: String,
@@ -37,9 +47,14 @@ const petSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    date: {
+    dateLost: {
         type: Date,
-        required: true,
+    },
+    dateFound: {
+        type: Date,
+    },
+    dateReunited: {
+        type: Date,
     },
     phone: {
         type: String,
@@ -48,6 +63,11 @@ const petSchema = new mongoose.Schema({
     createAt: {
         type: Date,
         default: Date.now(),
+    },
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: "User",
+        required: true,
     },
 });
 

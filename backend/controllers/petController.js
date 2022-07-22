@@ -5,31 +5,41 @@ const ApiFeatures = require("../utils/apifeatures");
 
 
 exports.createLostFoundPet = catchAsyncErrors(async (req, res, next) => {
-  req.body.pet = req.pet.id;
+  req.body.user = req.user.id;
 
   const pet = await Pet.create(req.body);
 
   res.status(201).json({
     success: true,
-    product,
+    pet,
   });
+
+
 });
 
 exports.getAllLostFoundPet = catchAsyncErrors(async (req, res) => {
-    const resultPerpage = 5;
-    const petCount = await Pet.countDocuments();
-  
-    const apiFeature = new ApiFeatures(Pet.find(), req.query)
-      .search()
-      .filter()
-      .pagination(resultPerpage);
-    const pet = await apiFeature.query;
-  
-    res.status(200).json({
-      success: true,
-      pet,
-      petCount,
-    });
+  const resultPerPage = 8;
+  const petsCount = await Pet.countDocuments();
+
+  const apiFeature = new ApiFeatures(Pet.find(), req.query)
+    .search()
+    .filter();
+
+  let pet = await apiFeature.query;
+
+  let filteredPetsCount = pet.length;
+
+  apiFeature.pagination(resultPerPage);
+
+  pet = await apiFeature.query.clone();
+
+  res.status(200).json({
+    success: true,
+    pet,
+    petsCount,
+    resultPerPage,
+    filteredPetsCount,
+  });
 });
 
 exports.getLostFoundPetDetails = catchAsyncErrors(async (req, res, next) => {
@@ -40,7 +50,7 @@ exports.getLostFoundPetDetails = catchAsyncErrors(async (req, res, next) => {
   
     res.status(200).json({
       success: true,
-      product,
+      pet,
     });
 });
 
