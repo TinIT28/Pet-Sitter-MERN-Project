@@ -30,9 +30,6 @@
   "devDependencies": {
     "nodemon": "^2.0.16"
   },
-  "engines": {
-    "node": "16.10.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TinIT28/Pet-Sitter-MERN.git"
