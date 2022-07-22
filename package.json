@@ -30,6 +30,10 @@
   "devDependencies": {
     "nodemon": "^2.0.16"
   },
+  "engines": {
+    "node": "16.4.0"
+},
+"postinstall": "ng build --aot",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TinIT28/Pet-Sitter-MERN.git"
