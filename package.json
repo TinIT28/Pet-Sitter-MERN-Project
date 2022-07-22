@@ -1,7 +1,6 @@
 {
   "name": "pet-sister",
   "version": "1.0.0",
-  "description": "",
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
@@ -31,5 +30,17 @@
   "devDependencies": {
     "nodemon": "^2.0.16"
   },
-  "engines": { "node": "10.x" }
+  "engines": {
+    "node": "16.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TinIT28/Pet-Sitter-MERN.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/TinIT28/Pet-Sitter-MERN/issues"
+  },
+  "homepage": "https://github.com/TinIT28/Pet-Sitter-MERN#readme",
+  "description": ""
 }
