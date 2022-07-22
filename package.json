@@ -30,6 +30,10 @@
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
+  "engines": {
+    "node": "16.x",
+    "npm": "6.x"
+  },
   "postinstall": "ng build --aot",
   "repository": {
     "type": "git",
