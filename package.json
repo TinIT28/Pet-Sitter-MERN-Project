@@ -6,7 +6,7 @@
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
@@ -29,10 +29,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  },
-  "engines": {
-    "node": "16.x",
-    "npm": "6.x"
   },
   "postinstall": "ng build --aot",
   "repository": {
