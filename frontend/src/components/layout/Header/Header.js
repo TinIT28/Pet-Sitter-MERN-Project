@@ -119,7 +119,7 @@ function Header() {
                         Home</Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/">
+                      <Link className="nav-link" to="/lostFound">
                         <i className="fa-solid fa-magnifying-glass-location"></i>
                         Lost&Found
                       </Link>
@@ -127,7 +127,7 @@ function Header() {
                     <li className="nav-item dropdown">
                       <Link
                         className="nav-link dropdown-toggle"
-                        to="/"
+                        to=""
                         id="offcanvasNavbarDropdown"
                         role="button"
                         data-bs-toggle="dropdown"
@@ -142,7 +142,7 @@ function Header() {
                         aria-labelledby="offcanvasavbarDropdown"
                       >
                         <li>
-                          <Link className="dropdown-item" to="/">
+                          <Link className="dropdown-item" to="/products">
                             <i className="fa-solid fa-dog"></i>
                             Pet Item
                           </Link>
@@ -158,7 +158,7 @@ function Header() {
                     <li className="nav-item dropdown">
                       <Link
                         className="nav-link dropdown-toggle"
-                        to="/"
+                        to=""
                         id="offcanvasNavbarDropdown"
                         role="button"
                         data-bs-toggle="dropdown"
