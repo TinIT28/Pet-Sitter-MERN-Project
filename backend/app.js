@@ -21,14 +21,12 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 const product = require('./routes/productRoutes');
 const user = require('./routes/userRoutes');
 const order = require('./routes/orderRoutes');
-const post = require('./routes/postRoutes');
 const payment = require('./routes/paymentRoutes');
 const pet = require("./routes/petRoutes");
 
 app.use('/api/v1', product);
 app.use('/api/v1', user);
 app.use('/api/v1', order);
-app.use('/api/v1', post);
 app.use('/api/v1', payment);
 app.use('/api/v1', pet);
 
