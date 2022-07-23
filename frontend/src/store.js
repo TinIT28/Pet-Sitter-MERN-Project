@@ -27,6 +27,8 @@ import {
   orderReducer,
 } from "./reducers/orderReducer";
 
+import { petsReducer } from "./reducers/petReducer";
+
 const reducer = combineReducers({
   products: productsReducer,
   productsRandom: productRandomReducer,
@@ -47,6 +49,7 @@ const reducer = combineReducers({
   userDetails: userDetailsReducer,
   productReviews: productReviewsReducer,
   review: reviewReducer,
+  pets: petsReducer,
 });
 
 let initialState = {

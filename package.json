@@ -22,8 +22,8 @@
     "mongoose": "^6.4.6",
     "mongoose-query-random": "^1.0.1",
     "mongoose-random": "^0.1.1",
+    "nodejs-unique-numeric-id-generator": "^1.0.1",
     "nodemailer": "^6.7.7",
-    "shortid": "^2.2.16",
     "stripe": "^9.14.0",
     "validator": "^13.7.0"
   },

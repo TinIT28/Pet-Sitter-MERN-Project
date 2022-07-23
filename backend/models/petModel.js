@@ -1,11 +1,9 @@
 const mongoose = require('mongoose');
-const shortId = require("shortid");
+var id = require("nodejs-unique-numeric-id-generator");
+mongoose.plugin(require('mongoose-nanoid'));
 
 const petSchema = new mongoose.Schema({
-    _idShort: {
-        type: String,
-        default: shortId.generate,
-    },
+    _id: false,
     name: {
         type: String,
         required: true,
@@ -71,4 +69,5 @@ const petSchema = new mongoose.Schema({
     },
 });
 
+petSchema.plugin(require('mongoose-nanoid'))
 module.exports = mongoose.model('Pet', petSchema);

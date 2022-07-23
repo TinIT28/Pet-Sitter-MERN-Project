@@ -32,7 +32,7 @@ function Header() {
                     <Link to="/">Home</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="./lost&found.html">Lost & Found</Link>
+                    <Link to="/">Lost & Found</Link>
                   </li>
                   <li className="nav-item">
                     <Link to="/">
@@ -204,7 +204,7 @@ function Header() {
                   </ul>
                 </div>
               </div>
-              <Link to="./lost&found.html" className="btn-report">REPORT PET</Link>
+              <Link to="/report" className="btn-report">REPORT PET</Link>
               <Link to="/cart"><i className="fas fa-shopping-cart cart-icon"></i></Link>
             </div>
           </div>
