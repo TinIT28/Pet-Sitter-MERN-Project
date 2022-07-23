@@ -40,6 +40,7 @@ import UserList from "./components/Admin/UserList";
 import UpdateUser from "./components/Admin/UpdateUser";
 import ProductReviews from "./components/Admin/ProductReviews";
 import ReportPet from "./components/ReportPet/ReportPet";
+import LostFoundPet from "./components/LostFoundPet/LostFoundPet";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -167,6 +168,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:keyword" element={<Products />} />
+          <Route path="/lostFound" element={<LostFoundPet />} />
           <Route path="/report" element={<ReportPet />} />
           <Route path="/search" element={<Search />} />
           <Route path="/login" element={<LoginSignUp />} />

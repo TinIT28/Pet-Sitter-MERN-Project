@@ -32,7 +32,7 @@ function Header() {
                     <Link to="/">Home</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/">Lost & Found</Link>
+                    <Link to="/lostFound">Lost & Found</Link>
                   </li>
                   <li className="nav-item">
                     <Link to="/">
@@ -93,7 +93,7 @@ function Header() {
                   <button
                     type="button"
                     className="btn-close text-reset"
-                    data-dismiss="offcanvas"
+                    data-bs-toggle="offcanvas"
                     aria-label="Close"
                     onClick={closeMenu}
                   ></button>
