@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import badgeLost from "../../images/badge_lost.png";
 import { formatDate, fromNow } from "../Utils/Date";
 
+function dateIsValid(date) {
+  return !Number.isNaN(new Date(date).getTime());
+}
+
 const LostPetCard = ({ pet }) => {
   return (
     <Fragment>
-      {pet.status === "Lost" ? (
+      {pet.status === "Lost" && pet.statusConfirm === "Censored" ? (
         <Link
           to={`/pet/${pet._id}`}
           className="lost-item col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4"
@@ -15,7 +19,7 @@ const LostPetCard = ({ pet }) => {
           <div className="card">
             <div className="card-img">
               <img
-                src={pet.image.url}
+                src={pet.image[0].url}
                 className="card-img-top"
                 alt={pet.name}
               />
@@ -36,7 +40,7 @@ const LostPetCard = ({ pet }) => {
                   <span>MISSING SINCE:</span>
                 </div>
                 <div className="missing-right">
-                  {formatDate(new Date(pet.dateLost))}
+                  {formatDate(Date.parse(pet.date))}
                 </div>
               </div>
               <div className="pet-place">

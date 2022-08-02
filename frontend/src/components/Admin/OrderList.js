@@ -9,7 +9,7 @@ import MetaData from "../layout/MetaData";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import SideBar from "./Sidebar";
-import { getAllOrders, updateOrder, deleteOrder, clearErrors } from "../../actions/orderAction";
+import { getAllOrders, deleteOrder, clearErrors } from "../../actions/orderAction";
 import { DELETE_ORDER_RESET } from "../../constants/orderConstant";
 
 const OrderList = () => {

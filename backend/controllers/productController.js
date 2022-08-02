@@ -10,7 +10,7 @@ const cloudinary = require("cloudinary");
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
   let images = [];
 
-  if (typeof req.body.images === "String") {
+  if (typeof req.body.images === "string") {
     images.push(req.body.images);
   } else {
     images = req.body.images;
@@ -113,7 +113,7 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
   //Images Start here
   let images = [];
 
-  if (typeof req.body.images === "String") {
+  if (typeof req.body.images === "string") {
     images.push(req.body.images);
   } else {
     images = req.body.images;

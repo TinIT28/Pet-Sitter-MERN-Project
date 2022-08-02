@@ -32,10 +32,10 @@ function Header() {
                     <Link to="/">Home</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/lostFound">Lost & Found</Link>
+                    <Link to="/lost-found">Lost & Found</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/">
+                    <Link to="">
                       <div>
                         Shop
                         <FaAngleDown />

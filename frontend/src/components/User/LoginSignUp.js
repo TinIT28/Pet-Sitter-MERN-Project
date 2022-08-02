@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
-import { Link, useLocation, useParams, useSearchParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./LoginSignUp.css";
 import Profile from "../../images/Profile.png";
 import { useDispatch, useSelector } from "react-redux";

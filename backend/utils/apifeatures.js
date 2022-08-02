@@ -11,10 +11,11 @@ class ApiFeatures {
             $regex: this.queryStr.keyword,
             $options: "i",
           },
+          
         }
       : {};
 
-    this.query = this.query.find({ ...keyword });
+    this.query = this.query.find({ ...keyword});
     return this;
   }
 

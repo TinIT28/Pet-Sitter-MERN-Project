@@ -6,7 +6,7 @@ import { formatDate, fromNow } from "../Utils/Date";
 const FoundPetCard = ({ pet }) => {
   return (
     <Fragment>
-      {pet.status === "Found" ? (
+      {pet.status === "Found" && pet.statusConfirm === "Censored" ? (
         <Link
           to={`/pet/${pet._id}`}
           className="found-item col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4"
@@ -14,7 +14,7 @@ const FoundPetCard = ({ pet }) => {
         >
           <div className="card">
             <div className="card-img">
-              <img src="./img/found-1.jpg" className="card-img-top" alt="..." />
+              <img src={pet.image[0].url} className="card-img-top" alt={pet.name} />
               <img className="badge-found" src={badgeFound} alt={pet.name} />
             </div>
             <h5 className="card-title pt-2 px-2" style={{color: "black"}}>{pet.name}</h5>
@@ -24,14 +24,14 @@ const FoundPetCard = ({ pet }) => {
                   <span>PET ID: </span>
                 </div>
                 <div className="id-right">
-                  <span>{pet._idShort}</span>
+                  <span>{pet._id}</span>
                 </div>
               </div>
               <div className="pet-missing">
                 <div className="missing-left">
                   <span>FOUNDED SINCE:</span>
                 </div>
-                <div className="missing-right">{formatDate(pet.dateFound)}</div>
+                <div className="missing-right">{formatDate(Date.parse(pet.date))}</div>
               </div>
               <div className="pet-place">
                 <div className="place-left">FROM:</div>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { TreeView, TreeItem } from "@material-ui/lab";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PostAddIcon from "@material-ui/icons/PostAdd";
+import PetsIcon from '@mui/icons-material/Pets';
 import AddIcon from "@material-ui/icons/Add";
 import ImportExportIcon from "@material-ui/icons/ImportExport";
 import ListAltIcon from "@material-ui/icons/ListAlt";
@@ -43,6 +44,12 @@ const Sidebar = () => {
         <p>
             <ListAltIcon />
             Orders
+        </p>
+      </Link>
+      <Link to="/admin/pets">
+        <p>
+            <PetsIcon />
+            Pets
         </p>
       </Link>
       <Link to="/admin/users">

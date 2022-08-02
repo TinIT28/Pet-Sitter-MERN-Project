@@ -2,7 +2,12 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import WebFont from "webfontloader";
 import Home from "./components/Home/Home";
 import ProductDetails from "./components/Product/ProductDetails";
@@ -29,7 +34,7 @@ import MyOrders from "./components/Order/MyOrders";
 import OrderDetails from "./components/Order/OrderDetails";
 import Dashboard from "./components/Admin/Dashboard";
 import ProductList from "./components/Admin/ProductList";
-import UpdateProduct from "./components/Admin/UpdateProduct"
+import UpdateProduct from "./components/Admin/UpdateProduct";
 import axios from "axios";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
@@ -40,7 +45,13 @@ import UserList from "./components/Admin/UserList";
 import UpdateUser from "./components/Admin/UpdateUser";
 import ProductReviews from "./components/Admin/ProductReviews";
 import ReportPet from "./components/ReportPet/ReportPet";
-import LostFoundPet from "./components/LostFoundPet/LostFoundPet";
+import PetDetails from "./components/Pet/PetDetails";
+import LostFoundPet from "./components/Pet/LostFoundPet";
+import MyPets from "./components/Pet/MyPets";
+import PetsListAdmin from "./components/Admin/PetsListAdmin";
+import UpdatePetAdmin from "./components/Admin/UpdatePetAdmin";
+import UpdateReunited from "./components/Admin/UpdateReunited";
+import UpdateMyPet from "./components/Pet/UpdateMyPet"
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -93,6 +104,7 @@ function App() {
             path="/me/update"
             element={<ProtectedRoute component={UpdateProfile} />}
           />
+          
           <Route
             exact
             path="/password/update"
@@ -115,6 +127,11 @@ function App() {
           />
           <Route
             exact
+            path="/mypets"
+            element={<ProtectedRoute component={MyPets} />}
+          />
+          <Route
+            exact
             path="/admin/dashboard"
             element={<ProtectedRoute isAdmin={true} component={Dashboard} />}
           />
@@ -131,8 +148,30 @@ function App() {
           <Route
             exact
             path="/admin/product/:id"
-            element={<ProtectedRoute isAdmin={true} component={UpdateProduct} />}
+            element={
+              <ProtectedRoute isAdmin={true} component={UpdateProduct} />
+            }
           />
+            <Route
+              exact
+              path="/admin/pets"
+              element={<ProtectedRoute isAdmin={true} component={PetsListAdmin} />}
+            />
+            <Route
+              exact
+              path="/admin/pet/update/:id"
+              element={<ProtectedRoute isAdmin={true} component={UpdatePetAdmin} />}
+            />
+            <Route
+              exact
+              path="/pet/admin/updateStatusConfirm/:id"
+              element={<ProtectedRoute isAdmin={true} component={UpdateReunited} />}
+            />
+            <Route
+              exact
+              path="/pet/user/update/:id"
+              element={<ProtectedRoute component={UpdateMyPet} />}
+            />
           <Route
             exact
             path="/admin/orders"
@@ -156,7 +195,9 @@ function App() {
           <Route
             exact
             path="/admin/reviews"
-            element={<ProtectedRoute isAdmin={true} component={ProductReviews} />}
+            element={
+              <ProtectedRoute isAdmin={true} component={ProductReviews} />
+            }
           />
           <Route exact path="/password/forgot" element={<ForgotPassword />} />
           <Route
@@ -166,9 +207,13 @@ function App() {
           />
           <Route path="/sad" element={<Loader />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/pet/:id" element={<PetDetails />} />
+          <Route path="/pets/:keyword" element={<LostFoundPet />} />
+          <Route path="/pets" element={<LostFoundPet />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/lost-found" element={<LostFoundPet />} />
+          <Route path="/lost-found/:keyword"element={<LostFoundPet />} />
           <Route path="/products/:keyword" element={<Products />} />
-          <Route path="/lostFound" element={<LostFoundPet />} />
           <Route path="/report" element={<ReportPet />} />
           <Route path="/search" element={<Search />} />
           <Route path="/login" element={<LoginSignUp />} />

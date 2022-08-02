@@ -57,6 +57,16 @@
     border-radius: 100%;
 }
 
+.dashboardPet {
+    background-color: #90dcdc !important;
+    color: rgb(255, 255, 255);
+}
+
+.dashboardUser {
+    background-color: #d4d466 !important;
+    color: rgb(255, 255, 255);
+}
+
 .dashboardSummaryBox2 > a:first-child {
     background-color: rgb(255, 110, 100);
     color: rgb(255, 255, 255);

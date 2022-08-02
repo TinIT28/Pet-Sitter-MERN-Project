@@ -102,8 +102,8 @@ export function fromNow(date) {
 }
 
 export function formatDate(date) {
-  let ye = new Intl.DateTimeFormat("en", { year: "numeric" }).format(date);
-  let mo = new Intl.DateTimeFormat("en", { month: "short" }).format(date);
-  let da = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(date);
+  let ye = new Intl.DateTimeFormat("en-US", { year: "numeric" }).format(date);
+  let mo = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);
+  let da = new Intl.DateTimeFormat("en-US", { day: "2-digit" }).format(date);
   return `${mo} ${da}, ${ye}`;
 }

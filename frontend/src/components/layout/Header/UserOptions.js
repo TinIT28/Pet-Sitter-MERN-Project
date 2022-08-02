@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import "./Header.css";
 import { SpeedDial, SpeedDialAction } from "@material-ui/lab";
 import Profile from "../../../images/Profile.png";
+import PetsIcon from '@mui/icons-material/Pets';
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
@@ -23,6 +24,7 @@ const UserOptions = ({ user }) => {
   const options = [
     { icon: <ListAltIcon />, name: "Orders", func: orders },
     { icon: <PersonIcon />, name: "Profile", func: account },
+    { icon: <PetsIcon />, name: "Pets", func: pets },
     {
       icon: (
         <ShoppingCartIcon
@@ -49,6 +51,10 @@ const UserOptions = ({ user }) => {
 
   function orders() {
     navigate("/orders");
+  }
+
+  function pets() {
+    navigate("/mypets");
   }
 
   function account() {

@@ -27,7 +27,7 @@ import {
   orderReducer,
 } from "./reducers/orderReducer";
 
-import { petsReducer } from "./reducers/petReducer";
+import { petsReducer, petDetailsReducer, newPetReducer, myPetReducer, petReducer } from "./reducers/petReducer";
 
 const reducer = combineReducers({
   products: productsReducer,
@@ -50,6 +50,10 @@ const reducer = combineReducers({
   productReviews: productReviewsReducer,
   review: reviewReducer,
   pets: petsReducer,
+  petDetails: petDetailsReducer,
+  newPet: newPetReducer,
+  myPets: myPetReducer,
+  pet: petReducer,
 });
 
 let initialState = {
