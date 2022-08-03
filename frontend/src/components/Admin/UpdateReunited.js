@@ -277,7 +277,6 @@ const UpdateReunited = () => {
                 name="avatar"
                 accept="image/*"
                 onChange={updateProductImagesChange}
-                multiple
               />
             </div>
 
