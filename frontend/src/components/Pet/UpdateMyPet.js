@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState, useRef } from "react";
 import "../Admin/NewProduct.css";
 import { useSelector, useDispatch } from "react-redux";
-import { clearErrors, getPetDetails, updatePet } from "../../actions/petAction";
+import { clearErrors, getPetDetails, updatePetUser } from "../../actions/petAction";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
 import MetaData from "../layout/MetaData";
@@ -17,6 +17,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
 import SideBar from "../Admin/Sidebar";
 import { useNavigate, useParams } from "react-router-dom";
+import { formatDate } from "../Utils/Date"
 import format from "date-fns/format";
 import { Calendar } from "react-date-range";
 import { UPDATE_PET_RESET } from "../../constants/petConstant";
@@ -64,7 +65,7 @@ const UpdateMyPet = () => {
         setCity(pet.city);
         setArea(pet.area);
         setAddress(pet.address);
-        setDate(pet.date);
+        setDate(formatDate(Date.parse(pet.date)));
         setStatus(pet.status);
         setOldImages(pet.image);
       }
@@ -106,7 +107,7 @@ const UpdateMyPet = () => {
           myForm.append("image", image);
         });
   
-      dispatch(updatePet(id, myForm));
+      dispatch(updatePetUser(id, myForm));
     };
   
     const updateProductImagesChange = (e) => {
@@ -289,7 +290,6 @@ const UpdateMyPet = () => {
                   name="avatar"
                   accept="image/*"
                   onChange={updateProductImagesChange}
-                  multiple
                 />
               </div>
   

@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState, useRef } from "react";
 import "./NewProduct.css";
 import { useSelector, useDispatch } from "react-redux";
-import { clearErrors, getPetDetails, updatePet } from "../../actions/petAction";
+import { clearErrors, getPetDetails, updatePetAdmin } from "../../actions/petAction";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
 import MetaData from "../layout/MetaData";
@@ -17,7 +17,6 @@ import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import SideBar from "./Sidebar";
-import { UPDATE_PRODUCT_RESET } from "../../constants/productConstants";
 import { useNavigate, useParams } from "react-router-dom";
 import { formatDate } from "../Utils/Date";
 import format from "date-fns/format";
@@ -106,7 +105,7 @@ const UpdateReunited = () => {
         myForm.append("images", image);
       });
 
-    dispatch(updatePet(id, myForm));
+    dispatch(updatePetAdmin(id, myForm));
   };
 
   const updateProductImagesChange = (e) => {

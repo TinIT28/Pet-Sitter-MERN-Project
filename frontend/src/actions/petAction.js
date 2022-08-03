@@ -28,11 +28,11 @@ import {
 } from "../constants/petConstant";
 
 // Get all pets
-export const getAllPets = () => async (dispatch) => {
+export const getAllPets = (currentPage = 1) => async (dispatch) => {
   try {
     dispatch({ type: ALL_PET_REQUEST });
 
-    const { data } = await axios.get(`/api/v1/pets`);
+    const { data } = await axios.get(`/api/v1/pets?page=${currentPage}`);
 
     dispatch({
       type: ALL_PET_SUCCESS,
@@ -46,27 +46,6 @@ export const getAllPets = () => async (dispatch) => {
   }
 };
 
-// Get all pets
-export const getFilterPets = (keyword = "") => async (dispatch) => {
-  try {
-    dispatch({ type: ALL_PET_REQUEST });
-
-    let link = `/api/v1/lost-found?keyword=${keyword}`
-
-
-    const { data } = await axios.get(link);
-
-    dispatch({
-      type: ALL_PET_SUCCESS,
-      payload: data,
-    });
-  } catch (error) {
-    dispatch({
-      type: ALL_PET_FAIL,
-      payload: error.response.data.message,
-    });
-  }
-};
 
 // Get product details
 export const getPetDetails = (id) => async (dispatch) => {
@@ -177,7 +156,7 @@ export const updatePetStatusConfirm = (id, petData) => async (dispatch) => {
 };
 
 // Update product
-export const updatePet = (id, petData) => async (dispatch) => {
+export const updatePetAdmin = (id, petData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PET_REQUEST });
 
@@ -187,6 +166,33 @@ export const updatePet = (id, petData) => async (dispatch) => {
 
     const { data } = await axios.put(
       `/api/v1/pet/admin/update/${id}`,
+      petData,
+      config
+    );
+
+    dispatch({
+      type: UPDATE_PET_SUCCESS,
+      payload: data.success,
+    });
+  } catch (error) {
+    dispatch({
+      type: UPDATE_PET_FAIL,
+      payload: error.response.data.message,
+    });
+  }
+};
+
+// Update product
+export const updatePetUser = (id, petData) => async (dispatch) => {
+  try {
+    dispatch({ type: UPDATE_PET_REQUEST });
+
+    const config = {
+      headers: { "Content-Type": "application/json" },
+    };
+
+    const { data } = await axios.put(
+      `/api/v1/pet/user/update/${id}`,
       petData,
       config
     );

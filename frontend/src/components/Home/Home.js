@@ -139,7 +139,7 @@ const Home = () => {
                     </span>
                   </div>
                   <div className="lost-button">
-                    <Link to="./lost&found.html"> Report Now </Link>
+                    <Link to="/report"> Report Now </Link>
                   </div>
                 </div>
               </div>
@@ -157,78 +157,7 @@ const Home = () => {
                     productsRandom.map((product) => <ProductCard key={product._id} product={product} />)}
                 </div>
               </div>
-              <div className="shop-bottom">
-                <div className="row">
-                  <div className="shop-item col-xl-3 col-lg-5 col-sm-6 col-12">
-                    <div className="card">
-                      <div className="card-img">
-                        <Link to="/">
-                          <img src={dog1} className="card-img-top" alt="..." />
-                        </Link>
-                      </div>
-                      <div className="card-body">
-                        <p className="card-text">
-                          Colorful corgi dogs such as yellow
-                        </p>
-                        <div className="shop-infor">
-                          <Link to="/">More Info</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="shop-item col-xl-3 col-lg-5 col-sm-6 col-12">
-                    <div className="card">
-                      <div className="card-img">
-                        <Link to="/">
-                          <img src={dog2} className="card-img-top" alt="..." />
-                        </Link>
-                      </div>
-                      <div className="card-body">
-                        <p className="card-text">
-                          Dog with black fur and obedient to his owner.
-                        </p>
-                        <div className="shop-infor">
-                          <Link to="/">More Info</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="shop-item col-xl-3 col-lg-5 col-sm-6 col-12">
-                    <div className="card">
-                      <div className="card-img">
-                        <Link to="/">
-                          <img src={cat1} className="card-img-top" alt="..." />
-                        </Link>
-                      </div>
-                      <div className="card-body">
-                        <p className="card-text">
-                          British short-haired cat with luxurious fur.
-                        </p>
-                        <div className="shop-infor">
-                          <Link to="/">More Info</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="shop-item col-xl-3 col-lg-5 col-sm-6 col-12">
-                    <div className="card">
-                      <div className="card-img">
-                        <Link to="/">
-                          <img src={cat2} className="card-img-top" alt="..." />
-                        </Link>
-                      </div>
-                      <div className="card-body">
-                        <p className="card-text">
-                          Orange cat fur and cross between breeds.
-                        </p>
-                        <div className="shop-infor">
-                          <Link to="/">More Info</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </section>
           <section className="home-spa">
@@ -247,25 +176,25 @@ const Home = () => {
                   </Link>
                 </div>
                 <div className="spa-bath-img col-md-6">
-                  <Link to="/">
+                  <Link to="/wash">
                     <img src={bathDog} alt="bathing" />
                     <h3>Bathing</h3>
                   </Link>
                 </div>
                 <div className="spa-trimming-img col-md-6">
-                  <Link to="/">
+                  <Link to="/hair">
                     <img src={hairStrimming} alt="strimming" />
                     <h3>Hair Strimming</h3>
                   </Link>
                 </div>
                 <div className="spa-nail-img col-md-6">
-                  <Link to="/">
+                  <Link to="/nail">
                     <img src={nailDog} alt="nail" />
                     <h3>Nail</h3>
                   </Link>
                 </div>
                 <div className="spa-relax-img col-md-6">
-                  <Link to="/">
+                  <Link to="/relax">
                     <img src={petRelax} alt="relax" />
                     <h3>Relax</h3>
                   </Link>
@@ -273,61 +202,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section className="petHotel">
-            <div className="container">
-              <div className="row">
-                <div className="pethotel-left col-xl-5 col-lg-12 col-md-12">
-                  <div className="pethotel-title">
-                    <h1>Pet Hotel</h1>
-                    <p>Take care of your pet while you are away</p>
-                  </div>
-                  <div className="pethotel-content">
-                    <div className="pethotel-item">
-                      <div className="pethotel-icon">
-                        <i className="fa-solid fa-house-chimney-window"></i>
-                      </div>
-                      <div className="pethotel-text">
-                        <h3>House of Pet</h3>
-                        <p>
-                          Make sure your pet has the cleanest <br />
-                          place to stay
-                        </p>
-                      </div>
-                    </div>
-                    <div className="pethotel-item">
-                      <div className="pethotel-icon">
-                        <i className="fa-solid fa-drumstick-bite"></i>
-                      </div>
-                      <div className="pethotel-text">
-                        <h3>Food of Pet</h3>
-                        <p>Nutritious food for pets</p>
-                      </div>
-                    </div>
-                    <div className="pethotel-item">
-                      <div className="pethotel-icon">
-                        <i className="fa-solid fa-bath"></i>
-                      </div>
-                      <div className="pethotel-text">
-                        <h3>Bathing of Pet</h3>
-                        <p>
-                          Based on the health and condition, <br />
-                          the pet will be bathed appropriately
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="btn-hotel">
-                    <Link to="/"> Booking Now </Link>
-                  </div>
-                </div>
-                <div className="pethotel-right col-xl-6 col-lg-12 col-md-12 col-12">
-                  <Link to="/">
-                    <img src={petHotel} alt="pet-hotel-doc" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
+        
           <section className="contact">
             <div className="container">
               <div className="contact-title">

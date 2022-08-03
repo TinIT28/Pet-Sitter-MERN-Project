@@ -41,7 +41,7 @@ exports.createLostFoundPet = catchAsyncErrors(async (req, res, next) => {
 });
 
 exports.getAllLostFoundPet = catchAsyncErrors(async (req, res) => {
-  const resultPerPage = 8;
+  const resultPerPage = 5;
   const petsCount = await Pet.countDocuments();
 
   const apiFeature = new ApiFeatures(Pet.find(), req.query)

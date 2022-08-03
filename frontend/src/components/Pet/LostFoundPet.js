@@ -9,18 +9,23 @@ import FormLabel from "@mui/material/FormLabel";
 import { FormGroup } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useAlert } from "react-alert";
-import { clearErrors, getAllPets, getFilterPets } from "../../actions/petAction";
+import {
+  clearErrors,
+  getAllPets,
+  getFilterPets,
+} from "../../actions/petAction";
 import PetList from "./PetList";
 import Loader from "../layout/Loader/Loader";
 import MetaData from "../layout/MetaData";
+import Pagination from "react-js-pagination";
 
 const LostFoundPet = () => {
-  
-
   const dispatch = useDispatch();
   const alert = useAlert();
 
-  const { loading, error, pets } = useSelector((state) => state.pets);
+  const { loading, error, pets, petsCount, resultPerPage } = useSelector(
+    (state) => state.pets
+  );
 
   const [name, setName] = useState("");
   const [id, setId] = useState("");
@@ -29,6 +34,7 @@ const LostFoundPet = () => {
   const [address, setAddress] = useState("");
   const [species, setSpecies] = useState([]);
   const [gender, setGender] = useState([]);
+  const [currentPageNo, setCurrentPageNo] = useState(1);
   const [petsSearchData, setPetsSearchData] = useState(pets);
 
   useEffect(() => {
@@ -36,38 +42,37 @@ const LostFoundPet = () => {
       alert.error(error);
       dispatch(clearErrors());
     }
-    dispatch(getAllPets());
-  }, [dispatch, alert, error]);
-
+    dispatch(getAllPets(currentPageNo));
+  }, [dispatch, alert, error, currentPageNo]);
 
   const checkHandler = (e) => {
-    let statusArray = [...statuses]
+    let statusArray = [...statuses];
     if (e.target.checked === true) {
-      statusArray = [...statuses, e.target.value]
+      statusArray = [...statuses, e.target.value];
     } else {
-      statusArray.splice(statuses.indexOf(e.target.value), 1)
+      statusArray.splice(statuses.indexOf(e.target.value), 1);
     }
     setStatuses(statusArray);
     console.log(statusArray);
   };
 
   const checkSpecies = (e) => {
-    let speciesArray = [...species]
+    let speciesArray = [...species];
     if (e.target.checked === true) {
-      speciesArray = [...species, e.target.value]
+      speciesArray = [...species, e.target.value];
     } else {
-      speciesArray.splice(species.indexOf(e.target.value), 1)
+      speciesArray.splice(species.indexOf(e.target.value), 1);
     }
     setSpecies(speciesArray);
     console.log(speciesArray);
   };
 
   const checkGender = (e) => {
-    let genderArray = [...gender]
+    let genderArray = [...gender];
     if (e.target.checked === true) {
-      genderArray = [...gender, e.target.value]
+      genderArray = [...gender, e.target.value];
     } else {
-      genderArray.splice(gender.indexOf(e.target.value), 1)
+      genderArray.splice(gender.indexOf(e.target.value), 1);
     }
     setGender(genderArray);
     console.log(genderArray);
@@ -78,14 +83,16 @@ const LostFoundPet = () => {
 
     const newData = pets
       .filter((petName) =>
-        petName.name.toLowerCase()
+        petName.name
+          .toLowerCase()
           .includes(
             name === "" ? petName.name.toLowerCase() : name.toLowerCase()
           )
       )
       .filter((petId) => petId._id === (id === "" ? petId._id : id.trim()))
       .filter((petCity) =>
-        petCity.city.toLowerCase()
+        petCity.city
+          .toLowerCase()
           .trim()
           .includes(
             city === ""
@@ -94,13 +101,15 @@ const LostFoundPet = () => {
           )
       )
       .filter((petAddress) =>
-      petAddress.address.toLowerCase()
-        .trim()
-        .includes(
-          address === ""
-            ? petAddress.address.toLowerCase().trim()
-            : address.toLowerCase().trim()
-        ))
+        petAddress.address
+          .toLowerCase()
+          .trim()
+          .includes(
+            address === ""
+              ? petAddress.address.toLowerCase().trim()
+              : address.toLowerCase().trim()
+          )
+      )
       .filter((petStatus) => statuses.includes(petStatus.status))
       .filter((petSpecies) => species.includes(petSpecies.species))
       .filter((petGender) => gender.includes(petGender.gender));
@@ -108,8 +117,10 @@ const LostFoundPet = () => {
     setPetsSearchData(newData);
   };
 
+  let count = pets?.length;
+  console.log(count)
 
-
+  
   return (
     <Fragment>
       {loading ? (
@@ -399,12 +410,30 @@ const LostFoundPet = () => {
                 Search lost and found dogs, cats in your area.{" "}
               </p>
               <div className="list-view">
-                {petsSearchData && petsSearchData.length > 0 && petsSearchData.statusConfirm === "Censored"
+                {petsSearchData && petsSearchData.length > 0
                   ? petsSearchData.map((pet) => (
                       <PetList key={pet._id} pet={pet} />
                     ))
                   : ""}
               </div>
+              {resultPerPage < count && (
+                <div className="paginationBox">
+                  <Pagination
+                    activePage={currentPageNo}
+                    itemsCountPerPage={resultPerPage}
+                    totalItemsCount={petsCount}
+                    onChange={setCurrentPageNo}
+                    nextPageText="Next"
+                    prevPageText="Prev"
+                    firstPageText="1st"
+                    lastPageText="Last"
+                    itemClass="page-item"
+                    linkClass="page-link"
+                    activeClass="pageItemActive"
+                    activeLinkClass="pageLinkActive"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </Fragment>
