@@ -28,11 +28,11 @@ import {
 } from "../constants/petConstant";
 
 // Get all pets
-export const getAllPets = (currentPage = 1) => async (dispatch) => {
+export const getAllPets = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_PET_REQUEST });
 
-    const { data } = await axios.get(`/api/v1/pets?page=${currentPage}`);
+    const { data } = await axios.get(`/api/v1/pets`);
 
     dispatch({
       type: ALL_PET_SUCCESS,

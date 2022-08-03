@@ -17,15 +17,15 @@ import {
 import PetList from "./PetList";
 import Loader from "../layout/Loader/Loader";
 import MetaData from "../layout/MetaData";
-import Pagination from "react-js-pagination";
+import Pagination from "react-js-pagination"
 
 const LostFoundPet = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
 
-  const { loading, error, pets, petsCount, resultPerPage } = useSelector(
-    (state) => state.pets
-  );
+
+        const { loading, error, pets } = useSelector((state) => state.pets);
+
 
   const [name, setName] = useState("");
   const [id, setId] = useState("");
@@ -34,7 +34,6 @@ const LostFoundPet = () => {
   const [address, setAddress] = useState("");
   const [species, setSpecies] = useState([]);
   const [gender, setGender] = useState([]);
-  const [currentPageNo, setCurrentPageNo] = useState(1);
   const [petsSearchData, setPetsSearchData] = useState(pets);
 
   useEffect(() => {
@@ -42,8 +41,10 @@ const LostFoundPet = () => {
       alert.error(error);
       dispatch(clearErrors());
     }
-    dispatch(getAllPets(currentPageNo));
-  }, [dispatch, alert, error, currentPageNo]);
+
+    dispatch(getAllPets());
+  }, [dispatch, alert, error]);
+
 
   const checkHandler = (e) => {
     let statusArray = [...statuses];
@@ -116,11 +117,10 @@ const LostFoundPet = () => {
 
     setPetsSearchData(newData);
   };
+  let count = petsSearchData.length
 
-  let count = pets?.length;
-  console.log(count)
 
-  
+
   return (
     <Fragment>
       {loading ? (
@@ -416,24 +416,8 @@ const LostFoundPet = () => {
                     ))
                   : ""}
               </div>
-              {resultPerPage < count && (
-                <div className="paginationBox">
-                  <Pagination
-                    activePage={currentPageNo}
-                    itemsCountPerPage={resultPerPage}
-                    totalItemsCount={petsCount}
-                    onChange={setCurrentPageNo}
-                    nextPageText="Next"
-                    prevPageText="Prev"
-                    firstPageText="1st"
-                    lastPageText="Last"
-                    itemClass="page-item"
-                    linkClass="page-link"
-                    activeClass="pageItemActive"
-                    activeLinkClass="pageLinkActive"
-                  />
-                </div>
-              )}
+
+             
             </div>
           </div>
         </Fragment>

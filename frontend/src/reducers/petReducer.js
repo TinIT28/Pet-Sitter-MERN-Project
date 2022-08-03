@@ -44,7 +44,6 @@ export const petsReducer = (state = { pets: [] }, action) => {
         loading: false,
         pets: action.payload.pet,
         petsCount: action.payload.petsCount,
-        resultPerPage: action.payload.resultPerPage,
         filteredPetsCount: action.payload.filteredPetsCount,
       };
 

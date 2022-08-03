@@ -41,7 +41,6 @@ exports.createLostFoundPet = catchAsyncErrors(async (req, res, next) => {
 });
 
 exports.getAllLostFoundPet = catchAsyncErrors(async (req, res) => {
-  const resultPerPage = 5;
   const petsCount = await Pet.countDocuments();
 
   const apiFeature = new ApiFeatures(Pet.find(), req.query)
@@ -52,15 +51,12 @@ exports.getAllLostFoundPet = catchAsyncErrors(async (req, res) => {
 
   let filteredPetsCount = pet.length;
 
-  apiFeature.pagination(resultPerPage);
-
   pet = await apiFeature.query.clone();
 
   res.status(200).json({
     success: true,
     pet,
     petsCount,
-    resultPerPage,
     filteredPetsCount,
   });
 });

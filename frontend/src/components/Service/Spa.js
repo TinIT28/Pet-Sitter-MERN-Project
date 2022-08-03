@@ -2,10 +2,12 @@ import React, { Fragment } from "react";
 import "./Spa.css";
 import firstImage from "../../images/first-img-index.png"
 import secondImage from "../../images/second-img-index.png"
+import MetaData from "../layout/MetaData";
 
 const Spa = () => {
   return (
     <Fragment>
+      <MetaData title="Spa Pet" />
        <section style={{ background: "#fff5ee" }} className="petspa">
         <div className="container">
           <div className="row">

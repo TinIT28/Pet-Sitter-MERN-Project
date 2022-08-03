@@ -2,10 +2,12 @@ import React, { Fragment } from "react";
 import washDog1 from "../../images/icon-wash-dog-1.png"
 import washDog2 from "../../images/icon-wash-dog-2.png"
 import washDog3 from "../../images/icon-wash-dog-3.png"
+import MetaData from "../layout/MetaData";
 
 const Wash = () => {
   return (
     <Fragment>
+      <MetaData title="Bath Pet" />
       <section className="wash">
         <div className="container">
           <div className="row">

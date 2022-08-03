@@ -157,7 +157,7 @@ const UpdateMyPet = () => {
   
     return (
       <Fragment>
-        <MetaData title="Update Product" />
+        <MetaData title="Update My Pet" />
         <div className="dashboard">
           <SideBar />
           <div className="newProductContainer">

@@ -61,7 +61,7 @@ function Header() {
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <Link to="/">Contact</Link>
+                    <Link to="/contact">Contact</Link>
                   </li>
                 </ul>
               </nav>
@@ -109,14 +109,7 @@ function Header() {
                 </div>
                 <div className="offcanvas-body">
                   <ul className="navbar-nav active justify-content-end flex-grow-1">
-                    <form className="d-flex">
-                      <input
-                        className="form-control"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                      />
-                    </form>
+                    
                     <li className="nav-item">
                       <Link
                         className="nav-link active"
@@ -157,19 +150,37 @@ function Header() {
                         aria-labelledby="offcanvasNavbarDropdown"
                       >
                         <li>
-                          <Link className="dropdown-item" to="/">
+                          <Link className="dropdown-item" to="/spa">
                             <i className="fa-solid fa-wand-magic-sparkles"></i>
                             Spa & Grooming
                           </Link>
                         </li>
                         <li>
-                          <Link className="dropdown-item" to="/">
-                            <i className="fa-solid fa-hotel"></i>
-                            Pet Hotel
+                          <Link className="dropdown-item" to="/relax">
+                            <i className="fa-solid fa-wand-magic-sparkles"></i>
+                            Relax
                           </Link>
                         </li>
                         <li>
-                          <Link className="dropdown-item" to="/">
+                          <Link className="dropdown-item" to="/wash">
+                            <i className="fa-solid fa-wand-magic-sparkles"></i>
+                            Wash
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="dropdown-item" to="/hair">
+                            <i className="fa-solid fa-wand-magic-sparkles"></i>
+                            Hair
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="dropdown-item" to="/nail">
+                            <i className="fa-solid fa-wand-magic-sparkles"></i>
+                            Nail
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="dropdown-item" to="/guide">
                             <i className="fa-solid fa-handshake-angle"></i>
                             Pet Guide
                           </Link>

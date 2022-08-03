@@ -6,7 +6,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useLocation,
 } from "react-router-dom";
 import WebFont from "webfontloader";
 import Home from "./components/Home/Home";
@@ -58,6 +57,7 @@ import Wash from "./components/Service/Wash";
 import Hair from "./components/Service/Hair";
 import Nail from "./components/Service/Nail";
 import Guide from "./components/Service/Guide";
+import Contact from "./components/layout/Contact/Contact"
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -222,6 +222,7 @@ function App() {
           <Route path="/hair" element={<Hair />} />
           <Route path="/nail" element={<Nail />} />
           <Route path="/guide" element={<Guide />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
           <Route path="/lost-found" element={<LostFoundPet />} />
           <Route path="/lost-found/:keyword"element={<LostFoundPet />} />

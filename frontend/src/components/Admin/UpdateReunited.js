@@ -1,7 +1,11 @@
 import React, { Fragment, useEffect, useState, useRef } from "react";
 import "./NewProduct.css";
 import { useSelector, useDispatch } from "react-redux";
-import { clearErrors, getPetDetails, updatePetAdmin } from "../../actions/petAction";
+import {
+  clearErrors,
+  getPetDetails,
+  updatePetAdmin,
+} from "../../actions/petAction";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
 import MetaData from "../layout/MetaData";
@@ -15,7 +19,7 @@ import SpellcheckIcon from "@material-ui/icons/Spellcheck";
 import HolidayVillageIcon from "@mui/icons-material/HolidayVillage";
 import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SideBar from "./Sidebar";
 import { useNavigate, useParams } from "react-router-dom";
 import { formatDate } from "../Utils/Date";
@@ -102,8 +106,8 @@ const UpdateReunited = () => {
     myForm.set("date", date);
 
     images.forEach((image) => {
-        myForm.append("images", image);
-      });
+      myForm.append("images", image);
+    });
 
     dispatch(updatePetAdmin(id, myForm));
   };
@@ -155,7 +159,7 @@ const UpdateReunited = () => {
 
   return (
     <Fragment>
-      <MetaData title="Update Product" />
+      <MetaData title="Update Reunited Pet" />
       <div className="dashboard">
         <SideBar />
         <div className="newProductContainer">
@@ -163,22 +167,18 @@ const UpdateReunited = () => {
             className="createProductForm"
             encType="multipart/form-data"
             onSubmit={updatePetSubmitHandler}
-            style={{ height: "93%"}}
+            style={{ height: "93%" }}
           >
             <h1>Update Pet</h1>
 
             <div>
               <SpellcheckIcon />
-              <input type="text" placeholder="Pet Name" defaultValue={name}   />
+              <input type="text" placeholder="Pet Name" defaultValue={name} />
             </div>
 
             <div>
               <TransgenderIcon />
-              <input
-                type="text"
-                placeholder="Species"
-                defaultValue={species}
-              />
+              <input type="text" placeholder="Species" defaultValue={species} />
             </div>
 
             <div>
@@ -237,7 +237,6 @@ const UpdateReunited = () => {
               <textarea
                 placeholder="Pet Description"
                 defaultValue={description}
-                
                 onChange={(e) => setDescription(e.target.value)}
                 cols="30"
                 rows="1"

@@ -9,10 +9,14 @@ import petGuide6 from "../../images/petguide6.jpg";
 import petGuide7 from "../../images/petguide7.jpg";
 import petGuide8 from "../../images/petguide8.jpg";
 import "./Guide.css";
+import ReactPlayer from 'react-player';
+import MetaData from "../layout/MetaData";
 
 const Guide = () => {
   return (
-    <section id="about" className="about">
+    <Fragment>
+      <MetaData title="Pet Guide" />
+      <section id="about" className="about">
       <div className="container">
         <div className="section-header">
           <h1>PET GUIDE </h1>
@@ -58,10 +62,7 @@ const Guide = () => {
 
                 <div className="position-relative mt-4">
                   <img src={petGuide5} className="img-fluid" alt="" />
-                  <Link
-                    to="https://www.youtube.com/watch?v=1oDGa2yPb2g"
-                    className="glightbox play-btn"
-                  ></Link>
+                  <a href={`https://www.youtube.com/watch?v=1oDGa2yPb2g`} className="glightbox play-btn"></a>
                 </div>
               </div>
             </div>
@@ -105,10 +106,7 @@ const Guide = () => {
                 </ul>
                 <div className="position-relative mt-4">
                   <img src={petGuide6} className="img-fluid" alt="" />
-                  <Link
-                    to="https://www.youtube.com/watch?v=6w_8gUABsFg"
-                    className="glightbox play-btn"
-                  ></Link>
+                  <a href={"https://www.youtube.com/watch?v=6w_8gUABsFg"} className="glightbox play-btn"></a>
                 </div>
               </div>
             </div>
@@ -166,10 +164,7 @@ const Guide = () => {
                 </ul>
                 <div className="position-relative mt-4">
                   <img src={petGuide7} className="img-fluid" alt="" />
-                  <Link
-                    to="https://www.youtube.com/watch?v=qNZsXt5pT-I"
-                    className="glightbox play-btn"
-                  ></Link>
+                  <a href={"https://www.youtube.com/watch?v=qNZsXt5pT-I"} className="glightbox play-btn"></a>
                 </div>
               </div>
             </div>
@@ -202,10 +197,7 @@ const Guide = () => {
                 </ul>
                 <div className="position-relative mt-4">
                   <img src={petGuide8} className="img-fluid" alt="" />
-                  <Link
-                    to="https://www.youtube.com/watch?v=92abvfkGMPI"
-                    className="glightbox play-btn"
-                  ></Link>
+                  <a href={"https://www.youtube.com/watch?v=92abvfkGMPI"} className="glightbox play-btn"></a>
                 </div>
               </div>
             </div>
@@ -217,6 +209,7 @@ const Guide = () => {
         </div>
       </div>
     </section>
+    </Fragment>
   );
 };
 
