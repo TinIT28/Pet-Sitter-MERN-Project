@@ -51,7 +51,13 @@ import MyPets from "./components/Pet/MyPets";
 import PetsListAdmin from "./components/Admin/PetsListAdmin";
 import UpdatePetAdmin from "./components/Admin/UpdatePetAdmin";
 import UpdateReunited from "./components/Admin/UpdateReunited";
-import UpdateMyPet from "./components/Pet/UpdateMyPet"
+import UpdateMyPet from "./components/Pet/UpdateMyPet";
+import Spa from "./components/Service/Spa";
+import Relax from "./components/Service/Relax";
+import Wash from "./components/Service/Wash";
+import Hair from "./components/Service/Hair";
+import Nail from "./components/Service/Nail";
+import Guide from "./components/Service/Guide";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -210,6 +216,12 @@ function App() {
           <Route path="/pet/:id" element={<PetDetails />} />
           <Route path="/pets/:keyword" element={<LostFoundPet />} />
           <Route path="/pets" element={<LostFoundPet />} />
+          <Route path="/spa" element={<Spa />} />
+          <Route path="/relax" element={<Relax />} />
+          <Route path="/wash" element={<Wash />} />
+          <Route path="/hair" element={<Hair />} />
+          <Route path="/nail" element={<Nail />} />
+          <Route path="/guide" element={<Guide />} />
           <Route path="/products" element={<Products />} />
           <Route path="/lost-found" element={<LostFoundPet />} />
           <Route path="/lost-found/:keyword"element={<LostFoundPet />} />

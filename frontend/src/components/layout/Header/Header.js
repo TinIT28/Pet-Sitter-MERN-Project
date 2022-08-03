@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import logo from '../../../images/Logo.png';
-import { Link } from 'react-router-dom';
-import './Header.css';
-import { FaAngleDown} from 'react-icons/fa';
-
-
-
+import React, { useEffect, useState } from "react";
+import logo from "../../../images/Logo.png";
+import { Link } from "react-router-dom";
+import "./Header.css";
+import { FaAngleDown } from "react-icons/fa";
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -24,7 +21,7 @@ function Header() {
               </Link>
             </div>
 
-{/*  Start Header nav */}
+            {/*  Start Header nav */}
             <div className="header-nav col-lg-11">
               <nav className="navbar d-none d-md-block">
                 <ul className="nav-content">
@@ -35,16 +32,7 @@ function Header() {
                     <Link to="/lost-found">Lost & Found</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="">
-                      <div>
-                        Shop
-                        <FaAngleDown />
-                      </div>
-                    </Link>
-                    <ul className="submenu">
-                      <li><Link to="/products">Pet Item</Link></li>
-                      <li><Link to="/">Pet Shop</Link></li>
-                    </ul>
+                    <Link to="/products">Shop</Link>
                   </li>
                   <li className="nav-item">
                     <Link to="/">
@@ -52,22 +40,43 @@ function Header() {
                       <FaAngleDown />
                     </Link>
                     <ul className="submenu">
-                      <li><Link to="/spa">Spa & Grooming</Link></li>
-                      <li><Link to="/">Pet Hotel</Link></li>
-                      <li><Link to="/">Pet Guide</Link></li>
+                      <li>
+                        <Link to="/spa">Spa & Grooming</Link>
+                      </li>
+                      <li>
+                        <Link to="/relax">Relax</Link>
+                      </li>
+                      <li>
+                        <Link to="/wash">Wash</Link>
+                      </li>
+                      <li>
+                        <Link to="/hair">Hair</Link>
+                      </li>
+                      <li>
+                        <Link to="/nail">Nail</Link>
+                      </li>
+                      <li>
+                        <Link to="/guide">Pet Guide</Link>
+                      </li>
                     </ul>
                   </li>
-                  <li className="nav-item"><Link to="/">Contact</Link></li>
+                  <li className="nav-item">
+                    <Link to="/">Contact</Link>
+                  </li>
                 </ul>
               </nav>
             </div>
           </div>
-{/* End header nav */}
+          {/* End header nav */}
 
           <div className="header-right col-xl-4 col-lg-4 col-9">
             <div className="header-right-item col-sm-3">
-              <Link to="/search"><i className="fa-solid fa-magnifying-glass"></i></Link>
-              <li className="nav-login"><Link to="/login">Login</Link></li>
+              <Link to="/search">
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </Link>
+              <li className="nav-login">
+                <Link to="/login">Login</Link>
+              </li>
 
               <button
                 className="navbar-toggler"
@@ -76,8 +85,8 @@ function Header() {
                 data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar"
               >
-                <span className="navbar-toggler-icon" >
-                  <i className='fa-solid fa-bars'></i>
+                <span className="navbar-toggler-icon">
+                  <i className="fa-solid fa-bars"></i>
                 </span>
               </button>
               <div
@@ -99,7 +108,7 @@ function Header() {
                   ></button>
                 </div>
                 <div className="offcanvas-body">
-                  <ul className='navbar-nav active justify-content-end flex-grow-1'>
+                  <ul className="navbar-nav active justify-content-end flex-grow-1">
                     <form className="d-flex">
                       <input
                         className="form-control"
@@ -113,47 +122,23 @@ function Header() {
                         className="nav-link active"
                         aria-current="page"
                         to="/"
-                        style={{marginTop: "20px"}}
+                        style={{ marginTop: "20px" }}
                       >
                         <i className="fa-solid fa-house-chimney-window"></i>
-                        Home</Link>
+                        Home
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/lostFound">
+                      <Link className="nav-link" to="/lost-found">
                         <i className="fa-solid fa-magnifying-glass-location"></i>
                         Lost&Found
                       </Link>
                     </li>
-                    <li className="nav-item dropdown">
-                      <Link
-                        className="nav-link dropdown-toggle"
-                        to=""
-                        id="offcanvasNavbarDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i className="fa-solid fa-paw"></i>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/products">
+                        <i className="fa-solid fa-magnifying-glass-location"></i>
                         Shop
                       </Link>
-                      <ul
-                        className="dropdown-menu"
-              
-                        aria-labelledby="offcanvasavbarDropdown"
-                      >
-                        <li>
-                          <Link className="dropdown-item" to="/products">
-                            <i className="fa-solid fa-dog"></i>
-                            Pet Item
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item" to="/">
-                            <i className="fa-solid fa-bone"></i>
-                            Pet Shop
-                          </Link>
-                        </li>
-                      </ul>
                     </li>
                     <li className="nav-item dropdown">
                       <Link
@@ -204,14 +189,18 @@ function Header() {
                   </ul>
                 </div>
               </div>
-              <Link to="/report" className="btn-report">REPORT PET</Link>
-              <Link to="/cart"><i className="fas fa-shopping-cart cart-icon"></i></Link>
+              <Link to="/report" className="btn-report">
+                REPORT PET
+              </Link>
+              <Link to="/cart">
+                <i className="fas fa-shopping-cart cart-icon"></i>
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Header;
