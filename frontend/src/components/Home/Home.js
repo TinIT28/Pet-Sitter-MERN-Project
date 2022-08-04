@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import "./Home.css";
 import ProductCard from "./ProductCard.js";
 import MetaData from "../layout/MetaData";
-import { clearErrors, getProduct, getProductRandom } from "../../actions/productAction";
+import { clearErrors, getProductRandom } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
@@ -10,16 +10,12 @@ import carousel1 from "../../images/carousel-1.jpg";
 import carousel2 from "../../images/carousel-2.jpg";
 import carousel3 from "../../images/carousel-3.jpg";
 import lostAndFound from "../../images/lost&found-home.jpg";
-import dog1 from "../../images/dog1.jpg";
-import dog2 from "../../images/dog-2.jpg";
-import cat1 from "../../images/cat-1.jpg";
-import cat2 from "../../images/cat-2.jpg";
+
 import dogInTowel from "../../images/Dog-in-Towel.jpg";
 import bathDog from "../../images/tam-cho-dung-cach.jpg";
 import hairStrimming from "../../images/hair-strimming.jpg";
 import nailDog from "../../images/mong-cho.jpg";
 import petRelax from "../../images/pet-relax.jpg";
-import petHotel from "../../images/pet-hotel-doc.jpg";
 import { Link } from "react-router-dom";
 import Iframe from "react-iframe";
 
