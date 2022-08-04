@@ -18,10 +18,11 @@ const ProductCard = ({ product }) => {
               src={product.images[0].url}
               className="card-img-top"
               alt={product.name}
+              style={{ width: "259px", height: "232px"}}
             />
           </div>
           <div className="card-body">
-            <p className="card-text">{product.name}</p>
+            <p className="card-text" style={{ textOverflow: "ellipsis", WebkitBoxOrient: "vertical"}}>{product.name}</p>
             <div className="shop-infor">
               <div className="shop-price">{`${product.price.toLocaleString("it-IT", {
                         style: "currency",

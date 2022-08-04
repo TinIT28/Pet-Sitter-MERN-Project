@@ -22,6 +22,7 @@ const LostPetCard = ({ pet }) => {
                 src={pet.image[0].url}
                 className="card-img-top"
                 alt={pet.name}
+                style={{ height: "225px", width: "292px"}}
               />
               <img className="badge-lost" src={badgeLost} alt="badge-lost" />
             </div>

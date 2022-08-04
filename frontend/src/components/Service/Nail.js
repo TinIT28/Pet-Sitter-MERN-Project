@@ -31,20 +31,20 @@ const Nail = () => {
       ) : (
         <Fragment>
           <MetaData title="Nail Pet" />
-          <div class="row-nail-pr">
-            <div class="test-scroll-script" onscroll="myFunction()">
-              <div class="background-color-all">
-                <div class="container">
-                  <h1 class="big-title">
+          <div className="row-nail-pr">
+            <div className="test-scroll-script" onscroll="myFunction()">
+              <div className="background-color-all">
+                <div className="container">
+                  <h1 className="big-title">
                     {" "}
                     Pet nail cutting is not as difficult as you think.
                   </h1>
                   <div>
-                    <h5 class="small-title">
+                    <h5 className="small-title">
                       Steps To Cut Dog Nails At Home & Introducing The Nail
                       Clipper Kit
                     </h5>
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       When raising pet dogs, many owners are only interested in
                       bathing and trimming, but forget that regular <br /> nail
                       clipping is also a necessary job. Dog paws are like
@@ -56,7 +56,7 @@ const Nail = () => {
                       the nail can get into the meat and cause a serious
                       infection.
                     </p>
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       That's why, PetSitter will dedicate the following article
                       to guide you on how to cut your dog's nails at home with a
                       very discounted <br />
@@ -64,16 +64,16 @@ const Nail = () => {
                     </p>
                   </div>
                   <div>
-                    <h3 class="small-title">
+                    <h3 className="small-title">
                       Why is it important to trim the dog's nails so often?
                     </h3>
-                    <div class="img-center">
-                      <img class="img-respon" src={firstNail} alt="" />
-                      <p class="text-center">
+                    <div className="img-center">
+                      <img className="img-respon" src={firstNail} alt="" />
+                      <p className="text-center">
                         Dogs should be trimmed regularly
                       </p>
                     </div>
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       Regular dog nail clipping is not only a matter of beauty
                       but also helps protect your dog's health. Some of the
                       reasons
@@ -106,11 +106,11 @@ const Nail = () => {
                     </ul>
                   </div>
                   <div>
-                    <h3 class="small-title">
+                    <h3 className="small-title">
                       How often should a dog's nails be trimmed?
                     </h3>
 
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       Dog's toenails grow pretty quickly, so it's usually a good
                       idea to trim or sharpen them at least every 2 weeks.{" "}
                       <br />
@@ -121,8 +121,8 @@ const Nail = () => {
                     </p>
                   </div>
                   <div>
-                    <h3 class="small-title">Nail clippers</h3>
-                    <p class="padding-p-relax">
+                    <h3 className="small-title">Nail clippers</h3>
+                    <p className="padding-p-relax">
                       Dog nail clippers require a separate kit because dog nails
                       are very thick and hard. You can not arbitrarily cut them
                       with <br />a pair of scissors or a knife, it will be very
@@ -130,9 +130,9 @@ const Nail = () => {
                       you can find them at Shop.PettSitter,
                       <br /> which is currently on sale for up to 13%.
                     </p>
-                    <div class="img-center">
-                      <img class="img-respon" src={secondNail} alt="" />
-                      <p class="text-center">
+                    <div className="img-center">
+                      <img className="img-respon" src={secondNail} alt="" />
+                      <p className="text-center">
                         Professional dog nail clipper set includes: 1 pliers + 1
                         nail file
                       </p>
@@ -160,7 +160,7 @@ const Nail = () => {
                         nails of cats or other pets, extremely convenient.
                       </li>
                     </ul>
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       Using a nail clipper kit will make the job of making
                       "Nail" for your dog easier and more professional than
                       ever. If you do not own a set like this,
@@ -168,28 +168,28 @@ const Nail = () => {
                     </p>
                   </div>
                   <div>
-                    <h3 class="small-title">Steps to cut dog nails at home</h3>
-                    <h4 class="small-title">
+                    <h3 className="small-title">Steps to cut dog nails at home</h3>
+                    <h4 className="small-title">
                       Note the "pink area" before cutting the dog's nails
                     </h4>
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       The "pink zone" is an area in a dog's paw that contains
                       many blood vessels and nerves. If you accidentally cut
                       this area, <br />
                       it will cause pain and bleeding for the dog. Ideally, you
                       should trim your nails 2-4 mm from the pink area.
                     </p>
-                    <div class="img-center">
-                      <img class="img-respon" src={thirstNail} alt="" />
-                      <p class="text-center">
+                    <div className="img-center">
+                      <img className="img-respon" src={thirstNail} alt="" />
+                      <p className="text-center">
                         Pay attention to the “Pink Zone” area in the dog's
                         toenail
                       </p>
                     </div>
                   </div>
                   <div>
-                    <h3 class="small-title">Steps to cut dog nails</h3>
-                    <p class="padding-p-relax">
+                    <h3 className="small-title">Steps to cut dog nails</h3>
+                    <p className="padding-p-relax">
                       There are many different nail clippers, but there are two
                       simple and most popular ones: square (U-shaped ) and
                       scissors.
@@ -198,40 +198,40 @@ const Nail = () => {
                       work, you do not need to press <br />
                       the surface of the pliers to the nail.
                     </p>
-                    <div class="img-center">
-                      <img class="img-respon" src={fourNail} alt="" />
-                      <p class="text-center">
+                    <div className="img-center">
+                      <img className="img-respon" src={fourNail} alt="" style={{ width: "400px", height: "370px"}}/>
+                      <p className="text-center">
                         Pay attention to the “Pink Zone” area in the dog's
                         toenail
                       </p>
                     </div>
                     <ol style={{ listStyle: "none" }}>
-                      <li class="padding-step-nail">
+                      <li className="padding-step-nail">
                         Step 1: Call the dog back and place him on a table level
                         with you in the most comfortable position. If the puppy
                         shows signs of fear, you should ask someone to take care
                         of it. Avoid letting them squirm during the cutting
                         process, it will be very easy to cut into the meat.
                       </li>
-                      <li class="padding-step-nail">
+                      <li className="padding-step-nail">
                         Step 2: You should start trimming the toenails of the
                         hind legs first. Pick them up gently but firmly. Be
                         careful when lifting the hind legs, avoid turning the
                         legs, which can cause injury.
                       </li>
-                      <li class="padding-step-nail">
+                      <li className="padding-step-nail">
                         Step 3: Gently push the top of the dog's paw up to
                         expose the nail. Tilt the tip of the pliers about 45
                         degrees and cut off the excess nail. Press the pliers
                         gently but firmly to avoid breaking the dog's nails. Be
                         careful not to cut a blood vessel.
                       </li>
-                      <li class="padding-step-nail">
+                      <li className="padding-step-nail">
                         Step 4: After cutting, you should use a file to sharpen
                         the nail to reduce the sharpness. Avoid scratching
                         yourself when bathing them.
                       </li>
-                      <li class="padding-step-nail">
+                      <li className="padding-step-nail">
                         Step 5: Praise your dog when the nail clipping is done
                         well. You can reward them with snacks or a favorite
                         treat to encourage them.
@@ -239,7 +239,7 @@ const Nail = () => {
                     </ol>
                   </div>
                   <div>
-                    <h3 class="small-title">Some notes when cutting nails</h3>
+                    <h3 className="small-title">Some notes when cutting nails</h3>
                     <ul>
                       <li>
                         You cannot use a human nail clipper to cut a dog. It can
@@ -274,13 +274,13 @@ const Nail = () => {
                     </ul>
                   </div>
                   <div>
-                    <h3 class="small-title">
+                    <h3 className="small-title">
                       Harmful myths about cutting dog nails
                     </h3>
-                    <h6 class="small-title">
+                    <h6 className="small-title">
                       Dog's nails don't grow at all or grow very little?
                     </h6>
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       The truth is that dog toenails are just like human nails.
                       It will lengthen continuously from the time they are born
                       until they die. <br />
@@ -291,11 +291,11 @@ const Nail = () => {
                       severe cases, long nails can get stuck in the flesh,
                       causing pain and severe infection.
                     </p>
-                    <h6 class="small-title">
+                    <h6 className="small-title">
                       Dog nails don't need to be cut but will wear off on their
                       own?
                     </h6>
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       Today's dogs are almost no longer able to self-abrasive
                       like in the past. The reason may be due to the narrow
                       living space, <br />
@@ -307,10 +307,10 @@ const Nail = () => {
                       because the slippery,
                       <br /> does not help them in sharpening their nails.
                     </p>
-                    <h6 class="small-title">
+                    <h6 className="small-title">
                       Will nail clipping cause pain and bleeding for the dog?
                     </h6>
-                    <p class="padding-p-relax">
+                    <p className="padding-p-relax">
                       Dog nails are similar to human nails, so cutting them will
                       not cause any pain. Except, you cut the blood vessels in
                       the toenail
@@ -323,8 +323,8 @@ const Nail = () => {
                     </p>
                   </div>
                   <div>
-                    <h3 class="small-title">Epilogue:</h3>
-                    <p class="padding-p-relax">
+                    <h3 className="small-title">Epilogue:</h3>
+                    <p className="padding-p-relax">
                       Clipping dog nails is a necessary job to keep the dog
                       clean and healthy. If you know how to cut properly and use
                       a professional kit,
@@ -337,7 +337,7 @@ const Nail = () => {
               </div>
             </div>
             <div>
-              <div class="test-scroll-cart" onscroll="myFunction()">
+              <div className="test-scroll-cart" onscroll="myFunction()">
                 <div className="row-shop-item">
                   {productsRandom &&
                     productsRandom.map((product) => (

@@ -171,7 +171,7 @@ const Home = () => {
               </div>
               <div className="row">
                 <div className="spa-cover-img col-md-12">
-                  <Link to="/">
+                  <Link to="/spa">
                     <img src={dogInTowel} alt="dog" />
                   </Link>
                 </div>

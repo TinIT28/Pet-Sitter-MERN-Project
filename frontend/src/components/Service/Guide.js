@@ -62,7 +62,7 @@ const Guide = () => {
 
                 <div className="position-relative mt-4">
                   <img src={petGuide5} className="img-fluid" alt="" />
-                  <a href={`https://www.youtube.com/watch?v=1oDGa2yPb2g`} className="glightbox play-btn"></a>
+                  <a href={`https://www.youtube.com/watch?v=1oDGa2yPb2g`} className="glightbox play-btn" target="_blank"></a>
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@ const Guide = () => {
                 </ul>
                 <div className="position-relative mt-4">
                   <img src={petGuide6} className="img-fluid" alt="" />
-                  <a href={"https://www.youtube.com/watch?v=6w_8gUABsFg"} className="glightbox play-btn"></a>
+                  <a href={"https://www.youtube.com/watch?v=6w_8gUABsFg"} className="glightbox play-btn" target="_blank"></a>
                 </div>
               </div>
             </div>
@@ -164,7 +164,7 @@ const Guide = () => {
                 </ul>
                 <div className="position-relative mt-4">
                   <img src={petGuide7} className="img-fluid" alt="" />
-                  <a href={"https://www.youtube.com/watch?v=qNZsXt5pT-I"} className="glightbox play-btn"></a>
+                  <a href={"https://www.youtube.com/watch?v=qNZsXt5pT-I"} className="glightbox play-btn" target="_blank"></a>
                 </div>
               </div>
             </div>
@@ -197,7 +197,7 @@ const Guide = () => {
                 </ul>
                 <div className="position-relative mt-4">
                   <img src={petGuide8} className="img-fluid" alt="" />
-                  <a href={"https://www.youtube.com/watch?v=92abvfkGMPI"} className="glightbox play-btn"></a>
+                  <a href={"https://www.youtube.com/watch?v=92abvfkGMPI"} className="glightbox play-btn" target="_blank"></a>
                 </div>
               </div>
             </div>

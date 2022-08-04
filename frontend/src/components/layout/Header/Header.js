@@ -192,7 +192,7 @@ function Header() {
                         <i className="fa-solid fa-handshake-simple"></i>
                         Contact
                       </Link>
-                      <Link className="nav-link" to="/">
+                      <Link className="nav-link" to="/login">
                         <i className="fa-solid fa-right-to-bracket"></i>
                         Login
                       </Link>

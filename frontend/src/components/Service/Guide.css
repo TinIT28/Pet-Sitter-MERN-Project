@@ -1,24 +1,4 @@
-body {
-    font-family: "Roboto", sans-serif;
-  }
-  
-  html {
-    padding: 0;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Roboto", sans-serif;
-  }
-  
-  html {
-    padding: 0;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+
   
   .header {
     background-color: rgba(52, 160, 164, 0.8);

@@ -14,10 +14,17 @@ const FoundPetCard = ({ pet }) => {
         >
           <div className="card">
             <div className="card-img">
-              <img src={pet.image[0].url} className="card-img-top" alt={pet.name} />
+              <img
+                src={pet.image[0].url}
+                className="card-img-top"
+                alt={pet.name}
+                style={{ height: "225px", width: "292px" }}
+              />
               <img className="badge-found" src={badgeFound} alt={pet.name} />
             </div>
-            <h5 className="card-title pt-2 px-2" style={{color: "black"}}>{pet.name}</h5>
+            <h5 className="card-title pt-2 px-2" style={{ color: "black" }}>
+              {pet.name}
+            </h5>
             <div className="card-content">
               <div className="pet-id">
                 <div className="id-left">
@@ -31,7 +38,9 @@ const FoundPetCard = ({ pet }) => {
                 <div className="missing-left">
                   <span>FOUNDED SINCE:</span>
                 </div>
-                <div className="missing-right">{formatDate(Date.parse(pet.date))}</div>
+                <div className="missing-right">
+                  {formatDate(Date.parse(pet.date))}
+                </div>
               </div>
               <div className="pet-place">
                 <div className="place-left">FROM:</div>

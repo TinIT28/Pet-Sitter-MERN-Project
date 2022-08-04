@@ -143,10 +143,10 @@ const UpdatePetAdmin = () => {
               </div>
               {/*  */}
               <div
-                // style={{
-                //   display:
-                //     pet?.statusConfirm === "Censored" ? "none" : "block",
-                // }}
+                style={{
+                  display:
+                    pet?.statusConfirm === "Censored" ? "none" : "block",
+                }}
               >
                 <form
                   className="updatePetForm"

@@ -395,7 +395,6 @@ const ReportPet = () => {
                           name="myImage"
                           accept="image/*"
                           onChange={createPetImagesChange}
-                          multiple
                         />
                       </div>
                     </div>

@@ -11,14 +11,10 @@ import { Button } from "@material-ui/core";
 import MetaData from "../layout/MetaData";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import DescriptionIcon from "@material-ui/icons/Description";
-import StorageIcon from "@material-ui/icons/Storage";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
-import TransgenderIcon from "@mui/icons-material/Transgender";
 import HomeIcon from "@mui/icons-material/Home";
-import SpellcheckIcon from "@material-ui/icons/Spellcheck";
 import HolidayVillageIcon from "@mui/icons-material/HolidayVillage";
 import ModeCommentIcon from "@mui/icons-material/ModeComment";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SideBar from "./Sidebar";
 import { useNavigate, useParams } from "react-router-dom";
@@ -170,22 +166,6 @@ const UpdateReunited = () => {
             style={{ height: "93%" }}
           >
             <h1>Update Pet</h1>
-
-            <div>
-              <SpellcheckIcon />
-              <input type="text" placeholder="Pet Name" defaultValue={name} />
-            </div>
-
-            <div>
-              <TransgenderIcon />
-              <input type="text" placeholder="Species" defaultValue={species} />
-            </div>
-
-            <div>
-              <TransgenderIcon />
-              <input type="text" placeholder="Sex" defaultValue={gender} />
-            </div>
-
             <div>
               <HomeIcon />
               <input
@@ -219,7 +199,7 @@ const UpdateReunited = () => {
             <div>
               <CalendarMonthIcon />
               <input
-                value={date}
+                value={formatDate(Date.parse(date))}
                 readOnly
                 onClick={() => setOpen((open) => !open)}
               />

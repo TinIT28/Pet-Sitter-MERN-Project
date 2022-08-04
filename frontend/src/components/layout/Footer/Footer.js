@@ -22,14 +22,14 @@ const Footer = () => {
               </Link>
             </div>
             <div className="footer-text">
-              <FaPhone />
+            <i className="icon bi bi-telephone flex-shrink-0"></i>
               <p>
                 1800-123-4567 <br />
                 +91 987-654-3210
               </p>
             </div>
             <div className="footer-text">
-              <FaEnvelope />
+            <i className="icon bi bi-share flex-shrink-0"></i>
               <p>
                 pettsitter@gmail.com <br />
                 service@gmail.com
