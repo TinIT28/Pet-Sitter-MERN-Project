@@ -73,10 +73,7 @@ const UpdatePetAdmin = () => {
                 <div className="confirmshippingArea" style={{ paddingTop: "1vmax" }}>
                   <Typography>Pet Info</Typography>
                   <div className="orderDetailsContainerBox">
-                    <div>
-                      <p>Name of owner/Name of finder:</p>
-                      <span>{pet?.user?.name}</span>
-                    </div>
+                  
                     <div>
                       <p>Name of pet:</p>
                       <span>{pet?.name}</span>
@@ -111,7 +108,7 @@ const UpdatePetAdmin = () => {
                     </div>
                     <div>
                       <p>Phone:</p>
-                      <span>{pet?.phone}</span>
+                      <span>085897595</span>
                     </div>
                   </div>
 
