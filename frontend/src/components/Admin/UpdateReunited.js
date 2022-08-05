@@ -87,6 +87,8 @@ const UpdateReunited = () => {
     }
     document.addEventListener("keydown", hideOnEscape, true);
     document.addEventListener("click", hideOnClickOutside, true);
+
+    setDate(format(new Date(), "dd/MM/yyyy"));
   }, [dispatch, navigate, pet, id, error, alert, isUpdated, updateError]);
 
   const updatePetSubmitHandler = (e) => {
@@ -199,7 +201,7 @@ const UpdateReunited = () => {
             <div>
               <CalendarMonthIcon />
               <input
-                value={formatDate(Date.parse(date))}
+                value={date}
                 readOnly
                 onClick={() => setOpen((open) => !open)}
               />

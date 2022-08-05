@@ -61,6 +61,7 @@ exports.getAllLostFoundPet = catchAsyncErrors(async (req, res) => {
   });
 });
 
+
 exports.getLostFoundPetDetails = catchAsyncErrors(async (req, res, next) => {
     const pet = await Pet.findById(req.params.id);
     if (!pet) {

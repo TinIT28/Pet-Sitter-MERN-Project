@@ -14,15 +14,13 @@ import {
 import PetList from "./PetList";
 import Loader from "../layout/Loader/Loader";
 import MetaData from "../layout/MetaData";
-import Pagination from "react-js-pagination"
+import Pagination from "react-js-pagination";
 
 const LostFoundPet = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
 
-
-        const { loading, error, pets } = useSelector((state) => state.pets);
-
+  const { loading, error, pets } = useSelector((state) => state.pets);
 
   const [name, setName] = useState("");
   const [id, setId] = useState("");
@@ -39,8 +37,9 @@ const LostFoundPet = () => {
       dispatch(clearErrors());
     }
 
-    dispatch(getAllPets());
+    setPetsSearchData(dispatch(getAllPets()))
   }, [dispatch, alert, error]);
+
 
 
   const checkHandler = (e) => {
@@ -108,14 +107,12 @@ const LostFoundPet = () => {
               : address.toLowerCase().trim()
           )
       )
-      .filter((petStatus) => statuses.includes(petStatus.status))
-      .filter((petSpecies) => species.includes(petSpecies.species))
-      .filter((petGender) => gender.includes(petGender.gender));
+      // .filter((petStatus) => statuses.includes(petStatus.status))
+      // .filter((petSpecies) => species.includes(petSpecies.species))
+      // .filter((petGender) => gender.includes(petGender.gender));
 
     setPetsSearchData(newData);
   };
-
-
 
   return (
     <Fragment>
@@ -412,8 +409,6 @@ const LostFoundPet = () => {
                     ))
                   : ""}
               </div>
-
-             
             </div>
           </div>
         </Fragment>
