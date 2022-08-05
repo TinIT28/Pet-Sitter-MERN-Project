@@ -29,7 +29,7 @@ const LostFoundPet = () => {
   const [address, setAddress] = useState("");
   const [species, setSpecies] = useState([]);
   const [gender, setGender] = useState([]);
-  const [petsSearchData, setPetsSearchData] = useState(pets);
+  const [petsSearchData, setPetsSearchData] = useState([]);
 
   useEffect(() => {
     if (error) {
@@ -37,7 +37,7 @@ const LostFoundPet = () => {
       dispatch(clearErrors());
     }
 
-    setPetsSearchData(dispatch(getAllPets()))
+    dispatch(getAllPets());
   }, [dispatch, alert, error]);
 
 
@@ -107,9 +107,9 @@ const LostFoundPet = () => {
               : address.toLowerCase().trim()
           )
       )
-      // .filter((petStatus) => statuses.includes(petStatus.status))
-      // .filter((petSpecies) => species.includes(petSpecies.species))
-      // .filter((petGender) => gender.includes(petGender.gender));
+      .filter((petStatus) => statuses.includes(petStatus.status))
+      .filter((petSpecies) => species.includes(petSpecies.species))
+      .filter((petGender) => gender.includes(petGender.gender));
 
     setPetsSearchData(newData);
   };
