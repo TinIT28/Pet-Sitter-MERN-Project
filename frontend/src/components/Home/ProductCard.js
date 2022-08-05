@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link to={`/product/${product._id}`} className="shop-item col-xl-3 col-lg-5 col-sm-6 col-12" style={{textDecoration: "none" }}>
-        <div className="card">
+        <div className="card" style={{ marginBottom: "15px"}}>
           <div className="card-img">
             <img
               src={product.images[0].url}
