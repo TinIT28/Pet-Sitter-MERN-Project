@@ -19,7 +19,7 @@ const PetsListAdmin = () => {
   const alert = useAlert();
   const navigate = useNavigate();
   const { error, pets } = useSelector((state) => state.pets);
-  const { error: deleteError, isDeleted } = useSelector(state => state.product);
+  const { error: deleteError, isDeleted } = useSelector(state => state.pet);
 
   const deletePetHandler = (id) => {
     dispatch(deletePet(id));
@@ -43,7 +43,13 @@ const PetsListAdmin = () => {
   }, [dispatch, navigate, error, alert, deleteError, isDeleted])
 
   const columns = [
-    { field: "id", headerName: "Pet ID", minWidth: 300, flex: 1 },
+    { field: "id", headerName: "Pet ID", minWidth: 100, flex: 1 },
+    {
+      field: "name",
+      headerName: "Name",
+      minWidth: 100,
+      flex: 0.3,
+    },
     {
       field: "status",
       headerName: "Status",
@@ -105,6 +111,7 @@ const PetsListAdmin = () => {
     pets.forEach((item, index) => {
       rows.push({
         id: item._id,
+        name: item.name,
         status: item.status,
         area: item.area,
         address: item.address,
